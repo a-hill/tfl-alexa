@@ -23,7 +23,7 @@ public class TfLResponseSenderTest {
         // Therefore there should always be arrivals.
 
         TfLStoppointArrivalsResponse[] responses =
-                TfLResponseSender.fetch("/StopPoint/"
+                TfLResponseGetter.fetch("/StopPoint/"
                                         + naptanIdWestminsterPariamentSquare
                                         + "/Arrivals");
 
@@ -44,7 +44,7 @@ public class TfLResponseSenderTest {
         System.out.println("calling the api");
 
         TfLStoppointArrivalsResponse[] responses =
-                TfLResponseSender.fetch("/StopPoint/"
+                TfLResponseGetter.fetch("/StopPoint/"
                                         + naptanIdWestminsterPariamentSquare
                                         + "/Arrivals");
 

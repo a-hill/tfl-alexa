@@ -13,7 +13,7 @@ import java.io.IOException;
  * Created by andrewhill on 18/01/2017.
  */
 
-public class TfLResponseSender {
+public class TfLResponseGetter {
 
     public static final String API_BASE_URL = "http://api.tfl.gov.uk";
 
