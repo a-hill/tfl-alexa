@@ -3,8 +3,10 @@ package xyz.ahill.Alexa.LondonTransport.TfLAPIConnector;
 /**
  * Created by andrewhill on 18/01/2017.
  */
-public class TfLStoppointArrivalsResponse {
 
+public class StopPointArrivalsResponse extends TfLResponse {
+
+    private String id;
     private String naptanId;
     private String vehicleId;
     private String stationName;
@@ -20,10 +22,18 @@ public class TfLStoppointArrivalsResponse {
     private String currentLocation;
     private String towards;
     private String expectedArrival;
+    private String timeToLive;
     private String modeName;
 
     /* Empty Constructor for Gson Serialisation */
-    public TfLStoppointArrivalsResponse() {
+    StopPointArrivalsResponse() {
+
+    }
+
+    /* Getters */
+
+    public String getId() {
+        return id;
     }
 
     public String getNaptanId() {
@@ -86,61 +96,11 @@ public class TfLStoppointArrivalsResponse {
         return expectedArrival;
     }
 
-    public String getModeName() {
-        return modeName;
+    public String getTimeToLive() {
+        return timeToLive;
     }
 
-    @Override
-    public String toString() {
-        return "TfLStoppointArrivalsResponse{"
-               + "naptanId='"
-               + naptanId
-               + '\''
-               + ", vehicleId='"
-               + vehicleId
-               + '\''
-               + ", stationName='"
-               + stationName
-               + '\''
-               + ", lineId='"
-               + lineId
-               + '\''
-               + ", lineName='"
-               + lineName
-               + '\''
-               + ", platformName='"
-               + platformName
-               + '\''
-               + ", direction='"
-               + direction
-               + '\''
-               + ", bearing='"
-               + bearing
-               + '\''
-               + ", destinationNaptanId='"
-               + destinationNaptanId
-               + '\''
-               + ", destinationName='"
-               + destinationName
-               + '\''
-               + ", timestamp='"
-               + timestamp
-               + '\''
-               + ", timeToStation='"
-               + timeToStation
-               + '\''
-               + ", currentLocation='"
-               + currentLocation
-               + '\''
-               + ", towards='"
-               + towards
-               + '\''
-               + ", expectedArrival='"
-               + expectedArrival
-               + '\''
-               + ", modeName='"
-               + modeName
-               + '\''
-               + '}';
+    public String getModeName() {
+        return modeName;
     }
 }
