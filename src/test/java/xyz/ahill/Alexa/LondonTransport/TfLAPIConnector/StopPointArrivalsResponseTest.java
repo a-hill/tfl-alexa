@@ -26,6 +26,7 @@ public class StopPointArrivalsResponseTest {
     @Test
     public void testFetchByNaptanIdOnFirstBus() {
         StopPointArrivalsResponse firstResponse = responses.get(0);
+        System.out.println(responses.get(0).getTimeToStation());
         assertThat(firstResponse.getNaptanId(),
                 is(naptanIdWestminsterPariamentSquare));
     }

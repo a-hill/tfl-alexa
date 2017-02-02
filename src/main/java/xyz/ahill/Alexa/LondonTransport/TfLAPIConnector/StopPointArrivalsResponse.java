@@ -1,5 +1,7 @@
 package xyz.ahill.Alexa.LondonTransport.TfLAPIConnector;
 
+import java.util.Comparator;
+
 /**
  * Created by andrewhill on 18/01/2017.
  */
@@ -18,7 +20,7 @@ public class StopPointArrivalsResponse extends TfLResponse {
     private String destinationNaptanId;
     private String destinationName;
     private String timestamp;
-    private String timeToStation;
+    private int timeToStation;
     private String currentLocation;
     private String towards;
     private String expectedArrival;
@@ -80,7 +82,7 @@ public class StopPointArrivalsResponse extends TfLResponse {
         return timestamp;
     }
 
-    public String getTimeToStation() {
+    public int getTimeToStation() {
         return timeToStation;
     }
 
