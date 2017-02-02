@@ -37,7 +37,9 @@ public class TransportSpeechlet implements SpeechletV2 {
 
 
         if (intentName.equals("nextBus")) {
-            String responseString = NextBusIntent.handleNextBusIntent(user);
+            //String responseString = NextBusIntent.handleNextBusIntent(user);
+            String responseString = "Test Next Bus Intent";
+
             /* Output the string as a Tell Response */
             OutputSpeech outputSpeech = new PlainTextOutputSpeech();
             ((PlainTextOutputSpeech) outputSpeech).setText(responseString);
