@@ -31,12 +31,12 @@ public class NextBusIntent {
             StopPointArrivalsResponse arrival = listOfArrivals.get(i);
 
             /* Limit to 30 mins of responses or to 5 next buses */
-            if (arrival.getTimeToStation() / 60 > 30 || i > 5) {
+            if (arrival.getTimeToStation() / 60 > 15) {
                 break;
             }
 
-            response += " A " + arrival.getLineName() + " bus to " + arrival.getDestinationName()
-                      + " arrives in " + arrival.getTimeToStation() / 60 + " minuites.";
+            response += " A " + arrival.getLineName() + " to " + arrival.getDestinationName()
+                        + " in " + arrival.getTimeToStation() / 60 + " minuites.";
         }
 
         return response;
