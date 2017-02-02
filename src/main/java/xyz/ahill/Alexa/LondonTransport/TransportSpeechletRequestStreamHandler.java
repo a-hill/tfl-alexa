@@ -24,6 +24,9 @@ public class TransportSpeechletRequestStreamHandler extends SpeechletRequestStre
         supportedApplicationIds.add("amzn1.ask.skill.5c6475b2-fd9a-46f8-92bc-fe4aa121c7e4");
     }
 
+    public TransportSpeechletRequestStreamHandler() {
+        super(new TransportSpeechlet(), supportedApplicationIds);
+    }
 
     public TransportSpeechletRequestStreamHandler(SpeechletV2 speechlet, Set<String> supportedApplicationIds) {
         super(speechlet, supportedApplicationIds);
